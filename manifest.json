@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "ChangeLang",
+	"description": "change written text lang, by khsur angubh",
+	"version": "1.0",
+	"permissions": ["storage", "contextMenus", "activeTab", "tabs"],
+  
+	"browser_action": 
+	{
+	"default_icon": "icon.png",
+	"default_popup": "popup.html"
+	},
+  
+    
+	"browser_action": 
+	{
+		"name": "Click to change the icon's color"
+	},
+		
+	"content_scripts": 
+	[ {
+		"matches": ["<all_urls>"],
+		"js": ["changelang.js"]
+	} ],
+	
+	"background": 
+	{
+        "scripts": ["background.js"]
+    }
+}
